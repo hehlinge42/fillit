@@ -72,5 +72,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				*ft_realloc(void *ptr, size_t new_size);
 void				ft_putchar_err(char c);
 void				ft_putstr_err(char *s);
+int					get_next_line(const int fd, char **line);
 
 #endif
