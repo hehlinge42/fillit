@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 13:39:39 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/08 18:10:03 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/08 19:27:19 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ int		ft_check_domino(char domino[21], t_list **begin_list)
 		printf("if 4\n");
 		return (EXIT_FAILURE);
 	}
+	printf("CREATE\n");
 	ft_create_domino(nb, begin_list, domino);
 	nb++;
 	return (EXIT_SUCCESS);
@@ -99,7 +100,7 @@ int		ft_parse(int fd)
 {
 	char		buf[21];
 	int			ret;
-//	char		*line;
+	char		*line;
 	t_list		*begin_list;
 
 	begin_list = NULL;
@@ -111,15 +112,14 @@ int		ft_parse(int fd)
 			//ft_clear();
 			return (EXIT_FAILURE);
 		}
-		//get_next_line(fd, &line);
-//		if (!(*line == '\0'))
-//		{
+		get_next_line(fd, &line);
+		if (line[0] == '\0')
+		{
 			//ft_clear();
-//			return (EXIT_FAILURE);
-//		}
-		printf("buf %s\n", buf);
+			return (EXIT_FAILURE);
+		}
+		ft_strdel(&line);
 	}
-	printf("ret = %d\n", ret);
-	//ft_debog(&begin_list);
+	ft_debog(&begin_list);
 	return (EXIT_SUCCESS);
 }

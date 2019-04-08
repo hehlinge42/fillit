@@ -1,5 +1,5 @@
 CC = clang 
-CFLAGS = -Wall -Wextra -Werror -I $(INCL)
+CFLAGS = -g3 -Wall -Wextra -Werror -I $(INCL)
 OBJDIR = objs
 SRCDIR = ./srcs
 SRC = ft_parse.c \

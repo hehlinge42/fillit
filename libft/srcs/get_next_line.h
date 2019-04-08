@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 17:07:53 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/08 17:47:41 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/08 19:09:15 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <string.h>
 # include <errno.h>
 
-# define BUFF_SIZE 2048
+# define BUFF_SIZE 1
 
 int				get_next_line(const int fd, char **line);
 typedef struct	s_gnl
