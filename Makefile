@@ -2,9 +2,11 @@ CC = clang
 CFLAGS = -g3 -Wall -Wextra -Werror -I $(INCL)
 OBJDIR = objs
 SRCDIR = ./srcs
-SRC = ft_parse.c \
-		main.c \
-		ft_create_dominos.c
+SRC = main.c \
+	  error_handler.c \
+	  parsing.c \
+	  print.c \
+	  bits.c
 INCL = ./includes
 LIBCREATOR = $(addprefix $(LIBDIR)/, $(LIB))
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))

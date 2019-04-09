@@ -2,24 +2,25 @@
 # define FILLIT_H
 
 # include "../libft/includes/libft.h"
+# include <stdio.h>
+# define BUFF_SIZE 21
 
-typedef struct		s_fillit
+typedef struct s_domino
 {
-	int			length;
-	int			width;
-	int			rank;
-	char		piece[4][4];
-	char		parsed[4][4];
-	char		letter;
-}					t_fillit;
+	int		piece;
+	size_t	width;
+	size_t	height;
+	char	rank;
+}			t_domino;
 
-int		ft_parse(int fd);
-int		ft_check_domino(char domino[21], t_list **begin_list);
-int		ft_neighbour(char domino[21], int i);
-void	ft_create_domino(int nb, t_list **begin_list, char domino[21]);
-void	ft_fill_struct(t_fillit *t_domino);
-void	ft_width(t_fillit *domino, int *first_j);
-void	ft_length(t_fillit *domino, int *first_i);
-void	ft_debog(t_list **begin_list);
+int		ft_print_usage(void);
+int		ft_error(void);
+int		ft_parse(const int);
+int		ft_create_domino(t_list **begin_list, char buff[BUFF_SIZE + 1]);
+void	ft_print_board(t_list **begin_list);
+void	ft_print_bits(unsigned int n);
+int		ft_reverse_bits(unsigned int n);
+void	ft_del_list(t_list **begin_list);
+int		ft_check_domino(char *buff);
 
 #endif
