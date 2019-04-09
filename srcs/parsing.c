@@ -59,13 +59,13 @@ int		ft_parse(const int fd)
 	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
 	{
 		buff[ret] = '\0';
-		if (ft_create_domino(&begin_list, buff) == EXIT_FAILURE)
+		if (ft_create_domino(&begin_list, buff) == EXIT_FAILURE || ret > 545)
 		{
 			ft_del_list(&begin_list);
 			return (EXIT_FAILURE);
 		}
 	}
-	if (ret > 545 || ret < 0)
+	if (ret < 0)
 	{
 		ft_del_list(&begin_list);
 		return (EXIT_FAILURE);
