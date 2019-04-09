@@ -113,7 +113,7 @@ int		ft_parse(int fd)
 			return (EXIT_FAILURE);
 		}
 		get_next_line(fd, &line);
-		if (line[0] == '\0')
+		if (line && line[0] != '\0')
 		{
 			//ft_clear();
 			return (EXIT_FAILURE);
