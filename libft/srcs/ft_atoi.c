@@ -1,30 +1,43 @@
-#include "../includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 12:23:55 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_atoi(char *str)
+#include "../includes/../includes/libft.h"
+#include <stdio.h>
+
+int	ft_atoi(const char *str)
 {
-	int			sign;
-	char		*cpy;
-	long int	res;
-	
-	sign = 1;
+	int i;
+	int res;
+	int is_neg;
+
+	i = 0;
+	is_neg = 0;
 	res = 0;
-	cpy = str;
-	while (*cpy && (*cpy == ' ' || *cpy == '\f' || *cpy == '\n' || *cpy == '\r' || *cpy == '\t' || *cpy == '\v'))
-		cpy++;
-	if (*cpy == '+' || *cpy == '-')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+		is_neg = 1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (*cpy == '-')
-			sign = -1;
-		cpy++;
-	}
-	while (*cpy && *cpy >= '0' && *cpy <= '9')
-	{
-		res = res * 10 + *cpy - '0';
-		if (res < 0 && str[0] == '-')
+		if (res < 0 && is_neg)
 			return (0);
-		else if (res < 0)
+		else if (res < 0 && !is_neg)
 			return (-1);
-		cpy++;
+		res = res * 10 + (int)str[i] - '0';
+		i++;
 	}
-	return (res * sign);
+	if (is_neg)
+		return (-res);
+	return (res);
 }

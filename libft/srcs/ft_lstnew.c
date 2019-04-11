@@ -1,10 +1,23 @@
-#include "../includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 12:36:44 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-t_list		*ft_lstnew(void const *content, size_t content_size)
+#include "../includes/libft.h"
+#include <stdlib.h>
+
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*new_elem;
 
-	if (!(new_elem = (t_list*)malloc(sizeof(t_list))))
+	if (!(new_elem = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
 	if (!content)
 	{
@@ -13,8 +26,10 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		new_elem->content = ft_memalloc(content_size);
-		new_elem->content = ft_memcpy(new_elem->content, content, content_size);
+		if (!(new_elem->content = (void *)ft_memalloc(sizeof(void)
+			* (content_size + 1))))
+			return (NULL);
+		ft_memcpy(new_elem->content, content, content_size);
 		new_elem->content_size = content_size;
 	}
 	new_elem->next = NULL;

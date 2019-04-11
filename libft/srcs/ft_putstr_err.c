@@ -1,15 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:19:15 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:23:12 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
+#include <unistd.h>
 
-void	ft_putstr_err(const char *str)
+void	ft_putstr_err(const char *s)
 {
-	char *cpy;
-
-	if (!str)
-		return ;
-	cpy = (char*)str;
-	while (*cpy)
-	{
-		ft_putchar_err(*cpy);
-		cpy++;
-	}
+	write(2, s, ft_strlen(s));
 }

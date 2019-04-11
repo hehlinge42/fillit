@@ -1,16 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:18:29 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
+#include <unistd.h>
 
-void	ft_putendl_fd(const char *str, int fd)
+void	ft_putendl_fd(const char *s, int fd)
 {
-	char *cpy;
+	int i;
 
-	if (!str)
-		return ;
-	cpy = (char*)str;
-	while (*cpy)
+	i = -1;
+	if (fd >= 0)
 	{
-		ft_putchar_fd(*cpy, fd);
-		cpy++;
+		while (s[++i])
+			ft_putchar_fd(s[i], fd);
+		ft_putchar_fd('\n', fd);
 	}
-	ft_putchar_fd('\n', fd);
 }

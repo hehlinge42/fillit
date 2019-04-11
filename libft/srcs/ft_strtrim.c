@@ -1,54 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:26:19 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:58 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-static int		ft_checkchar(char c)
+char	*ft_strtrim(char const *s)
 {
-	if (c == ' ' || c == '\n' || c == '\t')
-		return (1);
-	return (0);
-}
-
-static size_t	ft_lensize(const char *s, int *beg, int *end)
-{
-	char	*cpy;
-	int		size;
-
-	cpy = (char*)s;
-	size = ft_strlen(cpy);
-	while (*cpy && ft_checkchar(*cpy++))
-		(*beg)++;
-	if (*beg == size)
-		return (0);
-	while (*cpy)
-		cpy++;
-	cpy--;
-	while (cpy > s && ft_checkchar(*cpy--))
-		(*end)++;
-	return (size - (*beg + *end));
-}
-
-char			*ft_strtrim(char const *s)
-{
+	int		i;
+	size_t	count;
 	char	*res;
-	char	*cpyres;
-	char	*cpys;
-	int		beg;
-	int		end;
 
+	i = -1;
+	count = 0;
 	if (!s)
 		return (NULL);
-	beg = 0;
-	end = 0;
-	if (!(res = ft_strnew(ft_lensize(s, &beg, &end))))
+	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		;
+	while (s[++i])
+		count++;
+	while (--i > 0 && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+		count--;
+	if (!(res = ft_strnew(count + 1)))
 		return (NULL);
-	cpyres = res;
-	cpys = (char*)s;
-	end = ft_strlen((char*)s) - end;
-	while (*(cpys + beg))
-	{	
-		if (beg == end)
-			break ;
-		*cpyres++ = *(cpys + beg);
-		beg++;
-	}
-	return (res);
+	return (ft_strncpy(res, s + i - count, count + 1));
 }

@@ -1,14 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:21:09 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*cpydest;
-	char	*cpysrc;
+	int i;
 
-	cpydest = dest;
-	cpysrc = src;
-	while (*cpysrc)
-		*cpydest++ = *cpysrc++;
-	*cpydest = '\0';
-	return (dest);
+	i = -1;
+	while (src[++i])
+		dst[i] = src[i];
+	dst[i] = src[i];
+	return (dst);
 }

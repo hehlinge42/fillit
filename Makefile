@@ -5,8 +5,8 @@ SRCDIR = ./srcs
 SRC = main.c \
 	  error_handler.c \
 	  parsing.c \
-	  print.c \
-	  bits.c
+	  bits.c \
+	  mapping.c
 INCL = ./includes
 LIBCREATOR = $(addprefix $(LIBDIR)/, $(LIB))
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))

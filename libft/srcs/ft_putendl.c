@@ -1,7 +1,24 @@
-#include "../includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:29:44 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_putendl(char const *s)
+#include "../includes/libft.h"
+#include <unistd.h>
+
+void	ft_putendl(const char *s)
 {
-	ft_putstr(s);
+	int i;
+
+	i = -1;
+	while (s[++i])
+		ft_putchar(s[i]);
 	ft_putchar('\n');
 }

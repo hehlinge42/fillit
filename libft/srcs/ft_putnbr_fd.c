@@ -1,16 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:19:02 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
+#include <unistd.h>
 
-void	ft_putnbr_fd(int nb, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	long int    nb2;
+	unsigned int nbr;
 
-	nb2 = nb;
-	if ( nb < 0) 
+	if (fd >= 0)
 	{
-		nb2 = -nb2;
-		ft_putchar_fd('-', fd);
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			nbr = -n;
+		}
+		else
+			nbr = n;
+		if (nbr < 10)
+			ft_putchar_fd(nbr + '0', fd);
+		else
+		{
+			ft_putnbr_fd(nbr / 10, fd);
+			ft_putnbr_fd(nbr % 10, fd);
+		}
 	}
-	if (nb2 >= 10)
-		ft_putnbr_fd((nb2 / 10), fd);
-	ft_putchar_fd((nb2 % 10) + '0', fd);
 }

@@ -1,19 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:20:29 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:54 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	const char	*cpys;
-	char		d;
+	int i;
 
-	d = (const char)c;
-	cpys = s;
-	while (*cpys)
+	i = 0;
+	if (c >= 0 && c <= 128)
 	{
-		if (*cpys == d)
-			return ((char*)cpys);
-		cpys++;
+		while (*(s + i))
+		{
+			if (*(s + i) == c)
+				return ((char *)s + i);
+			i++;
+		}
+		if (c == '\0')
+			return ((char *)s + i);
 	}
-	if (*cpys == c)
-		return ((char*)cpys);
 	return (NULL);
 }

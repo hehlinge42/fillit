@@ -1,16 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/01 13:24:01 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/10 17:18:58 by hehlinge         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/libft.h"
 
-char	*ft_strncat(char *dest, char *src, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char	*cpydest;
-	char	*cpysrc;
+	size_t	len;
+	char	*s;
 
-	cpydest = dest;
-	cpysrc = src;
-	while (*cpydest)
-		cpydest++;
-	while (n-- && *cpysrc)
-		*cpydest++ = *cpysrc++;
-	*cpydest = '\0';
-	return (dest);
+	s = s1;
+	s1 += ft_strlen(s1);
+	len = ft_strnlen(s2, n);
+	s1[len] = '\0';
+	ft_memcpy(s1, s2, len);
+	return (s);
 }
