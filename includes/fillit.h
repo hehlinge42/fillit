@@ -8,8 +8,8 @@
 typedef struct s_domino
 {
 	int		piece;
-	size_t	width;
-	size_t	height;
+	int		width;
+	int		height;
 	char	rank;
 }			t_domino;
 
