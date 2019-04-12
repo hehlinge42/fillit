@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/12 16:06:38 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/12 17:12:44 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,56 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 {
 	int		i;
 
-	//int debog = -1;
+	int debog = -1;
 	/*ft_putstr("piece avant\n");
-	while (++debog < 16)
-		ft_print_bits(piece->tetri[debog]);*/
-	if (opt == CHECK_RIGHT && piece->width + piece->x < size)
+	  while (++debog < 16)
+	  ft_print_bits(piece->tetri[debog]);*/
+	if (opt == CHECK_RIGHT && piece->width + piece->x <= size)
 	{
 		i = -1;
 		while (++i < 4)
-		{
-			unsigned short tmp = (unsigned short)piece->tetri[piece->y + i];
-			ft_putstr("BEFORE\n");
-			tmp >>= 1;
-			ft_print_bits(tmp);
-			//piece->tetri[piece->y + i] = tmp;
-			/*
-			ft_putstr("AFTER \n");
-			ft_print_bits(piece->tetri[piece->y + i]);*/
-		}
+			piece->tetri[piece->y + i] >>= 1;
 		(piece->x)++;
 
-	/*	debog = -1;
+		debog = -1;
 		ft_putstr("piece avant\n");
 		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
+			ft_print_bits(piece->tetri[debog]);
 
 		return (EXIT_SUCCESS);
 	}
-	else if (opt == CHECK_DOWN && piece->width + piece->x < size)
+	else if (opt == CHECK_DOWN && piece->height + piece->y <= size)
 	{
 		i = piece->width + 1;
-		while (--i > 0)
+		while (--i >= 0)
+		{
+			ft_putstr("Check down\n");
+			/*debog = -1;
+			ft_putstr("piece au debut\n");
+			while (++debog < 16)
+				ft_print_bits(piece->tetri[debog]);*/
+
 			piece->tetri[piece->y + i + 1] = piece->tetri[piece->y + i];
+			/*debog = -1;
+			ft_putstr("piece down\n");
+			while (++debog < 16)
+				ft_print_bits(piece->tetri[debog]);
+			debog = -1;
+			ft_putstr("piece left\n");
+			while (++debog < 16)
+				ft_print_bits(piece->tetri[debog]);*/
+
+		}
+		i = piece->width + 1;
+		while (--i >= 0)
+			piece->tetri[piece->y + i + 1] <<= piece->x;
+		piece->tetri[piece->y] = 0;
+		debog = -1;
+		/*ft_putstr("piece finale\n");
+		while (++debog < 16)
+			ft_print_bits(piece->tetri[debog]);*/
+		//piece->tetri[piece->y + i] <<= piece->x;
+		piece->x = 0;
 		(piece->y)++;
 		return (EXIT_SUCCESS);
 	}
@@ -71,9 +89,9 @@ int		ft_check_insert(t_tetri *map, t_tetri tetri)
 	while (y < tetri.height)
 	{
 		/*ft_putstr("map \n");
-		ft_print_bits(map->tetri[y + tetri.y]);
-		ft_putstr("piece \n");
-		ft_print_bits(tetri.tetri[y + tetri.y]);*/
+		  ft_print_bits(map->tetri[y + tetri.y]);
+		  ft_putstr("piece \n");
+		  ft_print_bits(tetri.tetri[y + tetri.y]);*/
 		if ((tetri.tetri[y + tetri.y] & map->tetri[y + tetri.y]))
 		{
 			ft_putstr("je me barre\n");
@@ -105,9 +123,9 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 	//int		i;
 	//
 	/*ft_putchar('\n');
-	ft_putnbr(nb_piece);
-	ft_putnbr(tetri);
-	ft_putchar('\n');*/
+	  ft_putnbr(nb_piece);
+	  ft_putnbr(tetri);
+	  ft_putchar('\n');*/
 	if (tetri  == nb_piece)
 		return (EXIT_SUCCESS);
 	if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
@@ -124,11 +142,12 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 	else
 	{
 		while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS)
+				if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
+					return (EXIT_SUCCESS);
+		ft_putstr("you shall not pass\n");
+		while (ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
 			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
 				return (EXIT_SUCCESS);
-		/*while (ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
-		  if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
-		  return (EXIT_SUCCESS);*/
 	}
 
 	/*i = 0;

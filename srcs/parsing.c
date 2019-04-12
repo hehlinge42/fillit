@@ -17,7 +17,7 @@ int		ft_check_domino(char *buff)
 	return (EXIT_SUCCESS);
 }
 
-void	ft_shift(short tetri[16], int x, int y)
+void	ft_shift(unsigned short tetri[16], int x, int y)
 {
 	while ((tetri[y] ^ UP_SHIFT) == UP_SHIFT)
 	{

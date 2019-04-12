@@ -1,6 +1,6 @@
 #include "../libft/includes/libft.h"
 
-void	ft_print_bits(short int n) 
+void	ft_print_bits(unsigned short int n) 
 { 
 	unsigned int	i; 
 	int				count;
