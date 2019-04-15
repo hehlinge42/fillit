@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/12 17:12:44 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/15 15:46:43 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,51 +17,47 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 	int		i;
 
 	int debog = -1;
-	/*ft_putstr("piece avant\n");
+	/*ft_putstr("piece avant right & down\n");
 	  while (++debog < 16)
 	  ft_print_bits(piece->tetri[debog]);*/
-	if (opt == CHECK_RIGHT && piece->width + piece->x <= size)
+	if (opt == CHECK_RIGHT && piece->width + piece->x < size)
 	{
 		i = -1;
 		while (++i < 4)
 			piece->tetri[piece->y + i] >>= 1;
 		(piece->x)++;
 
-		debog = -1;
-		ft_putstr("piece avant\n");
+		/*debog = -1;
+		ft_putstr("piece apres RIGHT\n");
 		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);
+			ft_print_bits(piece->tetri[debog]);*/
 
 		return (EXIT_SUCCESS);
 	}
-	else if (opt == CHECK_DOWN && piece->height + piece->y <= size)
-	{
-		i = piece->width + 1;
+	else if (opt == CHECK_DOWN && piece->height + piece->y < size)
+	{			
+		/*ft_putstr("piece down AVANT\n");
+		debog = -1;
+		while (++debog < 16)
+			ft_print_bits(piece->tetri[debog]);*/
+
+		i = piece->height + 1;
+		//ft_putstr("IIIIIIIIIII : \n");
+		//ft_putnbr(i);
+		//ft_putstr("\n YYYYYYYYYYY : \n");
+		//ft_putnbr(piece->y);
+		//ft_putstr("\n");
 		while (--i >= 0)
 		{
-			ft_putstr("Check down\n");
-			/*debog = -1;
-			ft_putstr("piece au debut\n");
-			while (++debog < 16)
-				ft_print_bits(piece->tetri[debog]);*/
-
 			piece->tetri[piece->y + i + 1] = piece->tetri[piece->y + i];
-			/*debog = -1;
-			ft_putstr("piece down\n");
-			while (++debog < 16)
-				ft_print_bits(piece->tetri[debog]);
 			debog = -1;
-			ft_putstr("piece left\n");
-			while (++debog < 16)
-				ft_print_bits(piece->tetri[debog]);*/
-
 		}
-		i = piece->width + 1;
+		i = piece->height + 1;
 		while (--i >= 0)
 			piece->tetri[piece->y + i + 1] <<= piece->x;
 		piece->tetri[piece->y] = 0;
-		debog = -1;
-		/*ft_putstr("piece finale\n");
+		/*debog = -1;
+		ft_putstr("piece apres down\n");
 		while (++debog < 16)
 			ft_print_bits(piece->tetri[debog]);*/
 		//piece->tetri[piece->y + i] <<= piece->x;
