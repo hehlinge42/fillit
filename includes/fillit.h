@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/12 13:21:27 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/15 11:49:49 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@
 
 typedef struct	s_tetri
 {
-	short		tetri[16];
-	int			x;
-	int			y;
-	int			height;
-	int			width;
+	unsigned short	tetri[16];
+	int				x;
+	int				y;
+	int				height;
+	int				width;
 }				t_tetri;
 
 int		ft_print_usage(void);
@@ -40,7 +40,7 @@ void	ft_print_bits(unsigned int n);
 int		ft_reverse_bits(unsigned int n);
 void	ft_del_list(t_list **begin_list);
 int		ft_check_domino(char *buff);
-void	ft_shift(short tetri[16], int x, int y);
+void	ft_shift(unsigned short tetri[16], int x, int y);
 int		ft_nextsqrt(int nb);
 void	ft_size_width(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 void	ft_size_height(t_tetri *piece, char buff[BUFF_SIZE + 1]);

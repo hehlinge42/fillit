@@ -5,7 +5,6 @@ SRCDIR = ./srcs
 SRC = main.c \
 	  error_handler.c \
 	  parsing.c \
-	  print.c \
 	  bits.c \
 	  ft_math.c \
 	  ft_resolve.c
