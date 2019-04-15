@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/15 11:49:49 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/15 13:00:45 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,8 @@ void	ft_size_height(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 int		ft_check_shift(t_tetri *piece, int x, int y);
 int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int size);
 int		ft_check_insert(t_tetri *map, t_tetri tetr);
+void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt);
+void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece);
+void	ft_print_map(int size, char map[size * size + 1]);
 
 #endif

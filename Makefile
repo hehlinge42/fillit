@@ -7,7 +7,8 @@ SRC = main.c \
 	  parsing.c \
 	  bits.c \
 	  ft_math.c \
-	  ft_resolve.c
+	  ft_resolve.c \
+	  print.c
 INCL = ./includes
 LIBCREATOR = $(addprefix $(LIBDIR)/, $(LIB))
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))

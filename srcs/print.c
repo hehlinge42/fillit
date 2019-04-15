@@ -1,51 +1,55 @@
-#include "../libft/includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/15 12:20:42 by edbaudou          #+#    #+#             */
+/*   Updated: 2019/04/15 13:05:57 by edbaudou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/fillit.h"
 
-void	ft_print_board(t_list **begin_list)
+void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece)
 {
-	t_list		*tmp;
-	t_domino	*v_domino;
-	int			tmp_domino;
-	int			i;
+	char	map[size * size + 1];
+	int		i;
+	int		mask;
+	int		j;
 
-	tmp = *begin_list;
-	while (tmp)
+	i = -1;
+	map[size * size] = '\0';
+	ft_memset(&map, '.', size * size);
+	i = -1;
+	ft_restart(tab, nb_piece - 1, 0);
+	while (++i < nb_piece)
 	{
-		v_domino = ((t_domino *)tmp->content);
-		if (!v_domino)
-			break ;
-		i = 1;
-		while (i < 32)
+		j = -1;
+		while (++j < 4)
 		{
-			tmp_domino = 1 << (i - 1);
-			if (tmp_domino & v_domino->piece)
-				ft_putchar(v_domino->rank);
-			else
-				ft_putchar('.');
-			i++;
+			mask = 15;
+			while (mask > 11)
+			{
+				if (tab[i].tetri[j] & (1 << mask))
+					map[size * tab[i].y + tab[i].x] = 'A' + i;
+				mask--;
+			}
 		}
-		tmp = tmp->next;
-		ft_putchar('\n');
 	}
+	ft_print_map(size, map);
 }
 
-void	ft_del_list(t_list **begin_list)
+void	ft_print_map(int size, char map[size * size + 1])
 {
-	t_list		*tmp;
-	t_domino	*del;
-	t_list		*tmp2;
+	int		count;
 
-	tmp = *begin_list;
-	while (tmp)
+	count = 0;
+	while (count < size * size)
 	{
-		del = ((t_domino *)tmp->content);
-		if (!del)
-			return ;
-		ft_memdel(&del);
-		tmp2 = tmp->next;
-		if (!tmp2)
-			return ;
-		ft_memdel(&tmp);
-		tmp = tmp2;
+		write(1, map + count, size);
+		write(1, "\n", 1);
+		count += size;
 	}
 }

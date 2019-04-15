@@ -27,14 +27,21 @@ void	ft_shift(unsigned short tetri[16], int x, int y)
 		tetri[y + 3] = 0;
 	}
 	while (((tetri[x] | LEFT_SHIFT) == LEFT_SHIFT)
-		&& ((tetri[x + 1] | LEFT_SHIFT) == LEFT_SHIFT)
-		&& ((tetri[x + 2] | LEFT_SHIFT) == LEFT_SHIFT)
-		&& ((tetri[x + 3] | LEFT_SHIFT) == LEFT_SHIFT))
+			&& ((tetri[x + 1] | LEFT_SHIFT) == LEFT_SHIFT)
+			&& ((tetri[x + 2] | LEFT_SHIFT) == LEFT_SHIFT)
+			&& ((tetri[x + 3] | LEFT_SHIFT) == LEFT_SHIFT))
 	{
+		int debog = -1;
+		ft_putstr("map \n");
+		ft_putnbr(x);
+		ft_putchar('\n');
+		while (++debog < 16)
+			ft_print_bits(tetri[debog]);
 		tetri[x] <<= 1;
 		tetri[x + 1] <<= 1;
 		tetri[x + 2] <<= 1;
 		tetri[x + 3] <<= 1;
+		//ft_putstr("inf 2\n");
 	}
 }
 
@@ -66,8 +73,8 @@ int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
 	ft_size_height(piece, buff);
 	ft_size_width(piece, buff);
 	i = -1;/*
-	while (++i < 4)
-		ft_print_bits(piece->tetri[i]);*/
+			  while (++i < 4)
+			  ft_print_bits(piece->tetri[i]);*/
 	return (EXIT_SUCCESS);
 }
 
@@ -88,6 +95,7 @@ int		ft_parse(const int fd)
 	char	buff[BUFF_SIZE + 1];
 	int		ret;
 	int		i;
+	int		size;
 
 	i = -1;
 	while (++i < NB_TETRI_MAX)
@@ -102,15 +110,34 @@ int		ft_parse(const int fd)
 	}
 	if (ret < 0)
 		return (EXIT_FAILURE);
-	int	debog = i;
-	if (ft_backtrack(tab, i, 0, ft_nextsqrt(i * 4)) == EXIT_SUCCESS)
+	size = ft_nextsqrt(i * 4);
+	while (ft_backtrack(tab, i, 0, size) == EXIT_FAILURE)
 	{
-		printf("IT Works, its amazing and we are the best!\n");
-		i = -1;
-		while (++i < 10)
-			ft_print_bits(tab[debog].tetri[i]);
-	}
-	else
-		printf("fuck yourself\n");
+		ft_restart(tab, i, 1);
+		size++;
+	}		
+	printf("IT Works, its amazing and we are the best!\n");
+	int	debog = -1;
+	while (++debog < 16)
+		ft_print_bits(tab[i].tetri[debog]);
+	ft_putchar('\n');
+	ft_create_map(tab, size, i);
 	return (EXIT_SUCCESS);
+}
+
+void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt)
+{
+	int		i;
+
+	i = 0;
+	while (i <= nb)
+	{
+		ft_shift(tab[i].tetri, tab[i].x, tab[i].y);
+		if (opt == 1)
+		{
+			tab[i].x = 0;
+			tab[i].y = 0;
+		}
+		i++;
+	}
 }
