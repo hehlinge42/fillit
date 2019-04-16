@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/16 11:51:01 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/16 18:01:38 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 		(piece->x)++;
 
 		/*debog = -1;
-		ft_putstr("piece apres RIGHT\n");
-		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
+		  ft_putstr("piece apres RIGHT\n");
+		  while (++debog < 16)
+		  ft_print_bits(piece->tetri[debog]);*/
 
 		return (EXIT_SUCCESS);
 	}
 	else if (opt == CHECK_DOWN && piece->height + piece->y < size)
 	{			
 		/*ft_putstr("piece down AVANT\n");
-		debog = -1;
-		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
+		  debog = -1;
+		  while (++debog < 16)
+		  ft_print_bits(piece->tetri[debog]);*/
 
 		i = piece->height + 1;
 		//ft_putstr("IIIIIIIIIII : \n");
@@ -57,9 +57,9 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 			piece->tetri[piece->y + i + 1] <<= piece->x;
 		piece->tetri[piece->y] = 0;
 		/*debog = -1;
-		ft_putstr("piece apres down\n");
-		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
+		  ft_putstr("piece apres down\n");
+		  while (++debog < 16)
+		  ft_print_bits(piece->tetri[debog]);*/
 		//piece->tetri[piece->y + i] <<= piece->x;
 		piece->x = 0;
 		(piece->y)++;
@@ -90,7 +90,24 @@ int		ft_check_insert(t_tetri *map, t_tetri tetri)
 		  ft_print_bits(tetri.tetri[y + tetri.y]);*/
 		if ((tetri.tetri[y + tetri.y] & map->tetri[y + tetri.y]))
 		{
-			//ft_putstr("je me barre\n");
+			if (tetri.x == 0 && tetri.y == 2)
+			{
+				int debog = -1;
+				ft_putstr("LOLOLOLOL\n");
+				while (++debog < 16)
+					ft_print_bits(tetri.tetri[debog]);
+				ft_putstr("tetri\n");
+				ft_print_bits(tetri.tetri[y + tetri.y]);
+				ft_putstr("map\n");
+				ft_print_bits(map->tetri[y + tetri.y]);
+				ft_putstr("map char\n");
+				//ft_create_map
+			}
+			ft_putstr("Insertion impossible. tetri.x = ");
+			ft_putnbr(tetri.x);
+			ft_putstr(", tetri.y = ");
+			ft_putnbr(tetri.y);
+			ft_putchar('\n');
 			return (EXIT_FAILURE);
 		}
 		y++;
@@ -126,11 +143,12 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 		return (EXIT_SUCCESS);
 	if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
 	{
-		/*ft_putstr("piece inserree\n");
-		  int debog = -1;
-		  ft_putstr("map \n");
-		  while (++debog < 16)
-		  ft_print_bits(tab[nb_piece].tetri[debog]);*/
+		ft_putstr("piece inseree, nb piece = ");
+		ft_putnbr(tetri + 1);
+		ft_putstr(" size de la map = ");
+		ft_putnbr(size);
+		ft_putchar('\n');
+		ft_create_map(tab, size, tetri + 1);
 
 		if (ft_backtrack(tab, nb_piece, ++tetri, size) == EXIT_SUCCESS)
 			return (EXIT_SUCCESS);
@@ -138,14 +156,16 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 	else
 	{
 		while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS)
-				if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
-					return (EXIT_SUCCESS);
-		//ft_putstr("you shall not pass\n");
+			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
+				return (EXIT_SUCCESS);
+		ft_putstr("passe a shift down, piece = ");
+		ft_putnbr(tetri + 1);
+		ft_putchar('\n');
 		while (ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
 			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
 				return (EXIT_SUCCESS);
 	}
-
+	ft_putstr("retirer la piece\n");
 	/*i = 0;
 	  while (i < nb_piece)
 	  {

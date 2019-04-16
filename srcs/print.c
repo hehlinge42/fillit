@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 12:20:42 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/16 11:49:43 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/16 16:17:33 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece)
 			}
 			tab[piece].y++;
 		}
+		tab[piece].y -= 4;
 	}
 	ft_print_map(size, map);
 }
