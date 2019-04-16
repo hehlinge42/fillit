@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/15 15:46:43 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/16 11:51:01 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int		ft_check_insert(t_tetri *map, t_tetri tetri)
 		  ft_print_bits(tetri.tetri[y + tetri.y]);*/
 		if ((tetri.tetri[y + tetri.y] & map->tetri[y + tetri.y]))
 		{
-			ft_putstr("je me barre\n");
+			//ft_putstr("je me barre\n");
 			return (EXIT_FAILURE);
 		}
 		y++;
@@ -140,7 +140,7 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 		while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS)
 				if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
 					return (EXIT_SUCCESS);
-		ft_putstr("you shall not pass\n");
+		//ft_putstr("you shall not pass\n");
 		while (ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
 			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
 				return (EXIT_SUCCESS);

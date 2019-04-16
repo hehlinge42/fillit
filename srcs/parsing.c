@@ -165,13 +165,13 @@ int		ft_parse(const int fd)
 	{
 		ft_restart(tab, i, 1);
 		size++;
-		printf("size = %d\n", size);
+		//printf("size = %d\n", size);
 	}		
-	ft_putstr("IT Works, its amazing and we are the best!\n");
+	/*ft_putstr("IT Works, its amazing and we are the best!\n");
 	int	debog = -1;
 	while (++debog < 16)
 		ft_print_bits(tab[i].tetri[debog]);
-	ft_putchar('\n');
+	ft_putchar('\n');*/
 	ft_create_map(tab, size, i);
 	return (EXIT_SUCCESS);
 }
@@ -181,7 +181,7 @@ void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt)
 	int		i;
 
 	i = 0;
-	ft_putstr("in restart\n");
+	//ft_putstr("in restart\n");
 	while (i < nb)
 	{
 		if (opt == 1)
