@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 12:55:57 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 13:25:41 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,30 +64,6 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 {
 	if (tetri  == nb_piece)
 		return (EXIT_SUCCESS);
-	if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
-	{
-		if (ft_backtrack(tab, nb_piece, ++tetri, size) == EXIT_SUCCESS)
-			return (EXIT_SUCCESS);
-		int		i = -1;
-		while (++i < tab[tetri - 1].height)
-			tab[nb_piece].tetri[tab[tetri - 1].y + i] &= ~tab[tetri - 1].tetri[tab[tetri - 1].y + i];
-	}
-	//else
-	//{
-	if (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS)
-	{
-		//ft_shift(&tab[tetri + 1], 1);
-		if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
-			return (EXIT_SUCCESS);
-		//ft_shift(&tab[tetri], 1);
-	}
-	
-	if (ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
-	{
-		ft_shift(&tab[tetri + 1], 1);
-		if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
-			return (EXIT_SUCCESS);
-	}
-	//}
+
 	return (EXIT_FAILURE);
 }
