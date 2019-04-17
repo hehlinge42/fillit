@@ -1,1103 +1,496 @@
-piece inseree, nb piece = 1 size de la map = 7
-AA.....
-AA.....
-.......
-.......
-.......
-.......
-.......
+piece numero 1
+1100 0000 0000 0000 
+0100 0000 0000 0000 
+0100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 1 size de la map = 4
+AA..
+.A..
+.A..
+....
+piece numero 2
+1000 0000 0000 0000 
+1000 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 0, tetri.y = 0
+piece numero 2
+0100 0000 0000 0000 
+0100 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 0
-piece inseree, nb piece = 2 size de la map = 7
-AAB....
-AAB....
-..B....
-..B....
-.......
-.......
-.......
+piece numero 2
+0010 0000 0000 0000 
+0010 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 2 size de la map = 4
+AAB.
+.AB.
+.ABB
+....
+piece numero 3
+1100 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 0, tetri.y = 0
+piece numero 3
+0110 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 0
+piece numero 3
+0011 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 0
-piece inseree, nb piece = 3 size de la map = 7
-AAB.CC.
-AABCC..
-..B....
-..B....
-.......
-.......
-.......
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 4
+passe a shift down, piece = 3
+piece numero 3
+0000 0000 0000 0000 
+1100 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 0, tetri.y = 1
+piece numero 3
+0000 0000 0000 0000 
+0110 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 1
+piece numero 3
+0000 0000 0000 0000 
+0011 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-piece inseree, nb piece = 4 size de la map = 7
-AAB.CC.
-AABCCDD
-..B..DD
-..B....
-.......
-.......
-.......
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 5
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 5
-piece inseree, nb piece = 5 size de la map = 7
-AAB.CC.
-AABCCDD
-.EB..DD
-EEB....
-E......
-.......
-.......
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-passe a shift down, piece = 6
+passe a shift down, piece = 3
+piece numero 3
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+1100 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 0, tetri.y = 2
+piece numero 3
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0110 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 2
+piece numero 3
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0011 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-piece inseree, nb piece = 6 size de la map = 7
-AAB.CC.
-AABCCDD
-.EB..DD
-EEBFFF.
-E....F.
-.......
-.......
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 7
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 7
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 3
+passe a shift down, piece = 2
+piece numero 2
+0000 0000 0000 0000 
+1000 0000 0000 0000 
+1000 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 2 size de la map = 4
+AA..
+BA..
+BA..
+BB..
+piece numero 3
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0011 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 7
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 7
-Insertion impossible. tetri.x = 0, tetri.y = 4
-piece inseree, nb piece = 7 size de la map = 7
-AAB.CC.
-AABCCDD
-.EB..DD
-EEBFFF.
-EGG..F.
-..G....
-..G....
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 1
+passe a shift down, piece = 3
+piece numero 2
+0000 0000 0000 0000 
+0100 0000 0000 0000 
+0100 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 1
+piece numero 2
+0000 0000 0000 0000 
+0010 0000 0000 0000 
+0010 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 5
-Insertion impossible. tetri.x = 1, tetri.y = 5
-Insertion impossible. tetri.x = 2, tetri.y = 5
-piece inseree, nb piece = 8 size de la map = 7
-AAB.CC.
-AABCCDD
-.EB..DD
-EEBFFF.
-EGG..F.
-..G.HH.
-..GHH..
+passe a shift down, piece = 2
+passe a shift down, piece = 2
+passe a shift down, piece = 2
+piece numero 1
+1100 0000 0000 0000 
+0100 0000 0000 0000 
+0100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 1 size de la map = 5
+AA...
+.A...
+.A...
+.....
+.....
+piece numero 2
+1000 0000 0000 0000 
+1000 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 0, tetri.y = 0
+piece numero 2
+0100 0000 0000 0000 
+0100 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 1, tetri.y = 0
+piece numero 2
+0010 0000 0000 0000 
+0010 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 2 size de la map = 5
+AAB..
+.AB..
+.ABB.
+.....
+.....
+piece numero 3
+1100 0000 0000 0000 
+1100 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+Insertion impossible. tetri.x = 0, tetri.y = 0
+piece numero 3
+0110 0000 0000 0000 
+0110 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+Insertion impossible. tetri.x = 1, tetri.y = 0
+piece numero 3
+0011 0000 0000 0000 
+0011 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
 Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-passe a shift down, piece = 9
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 4, tetri.y = 5
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-passe a shift down, piece = 8
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-passe a shift down, piece = 7
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 4, tetri.y = 3
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 5
-Insertion impossible. tetri.x = 1, tetri.y = 5
-Insertion impossible. tetri.x = 2, tetri.y = 5
-Insertion impossible. tetri.x = 3, tetri.y = 5
-Insertion impossible. tetri.x = 4, tetri.y = 5
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-passe a shift down, piece = 6
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 5
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-passe a shift down, piece = 5
-retirer la piece
-retirer la piece
-passe a shift down, piece = 4
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 4
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 4
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 4
-piece inseree, nb piece = 4 size de la map = 7
-AAB.CC.
-AABCC..
-..B....
-..B....
-.......
-DD.....
-DD.....
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 5
-retirer la piece
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 1, tetri.y = 5
-Insertion impossible. tetri.x = 2, tetri.y = 5
-Insertion impossible. tetri.x = 3, tetri.y = 5
-Insertion impossible. tetri.x = 4, tetri.y = 5
-Insertion impossible. tetri.x = 5, tetri.y = 5
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-passe a shift down, piece = 4
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 4, tetri.y = 0
-passe a shift down, piece = 3
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-passe a shift down, piece = 3
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-passe a shift down, piece = 3
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-passe a shift down, piece = 3
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-passe a shift down, piece = 3
-Insertion impossible. tetri.x = 0, tetri.y = 5
-Insertion impossible. tetri.x = 1, tetri.y = 5
-Insertion impossible. tetri.x = 2, tetri.y = 5
-Insertion impossible. tetri.x = 3, tetri.y = 5
-Insertion impossible. tetri.x = 4, tetri.y = 5
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-Insertion impossible. tetri.x = 6, tetri.y = 0
-passe a shift down, piece = 2
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-Insertion impossible. tetri.x = 6, tetri.y = 1
-passe a shift down, piece = 2
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-Insertion impossible. tetri.x = 6, tetri.y = 2
-passe a shift down, piece = 2
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-piece inseree, nb piece = 2 size de la map = 7
-AA.....
-AA.....
-.......
-......B
-......B
-......B
-......B
-Insertion impossible. tetri.x = 4, tetri.y = 5
-passe a shift down, piece = 3
-retirer la piece
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-passe a shift down, piece = 2
-retirer la piece
-retirer la piece
-piece inseree, nb piece = 1 size de la map = 8
-AA......
-AA......
-........
-........
-........
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-piece inseree, nb piece = 2 size de la map = 8
-AAB.....
-AAB.....
-..B.....
-..B.....
-........
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-piece inseree, nb piece = 3 size de la map = 8
-AAB.CC..
-AABCC...
-..B.....
-..B.....
-........
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-piece inseree, nb piece = 4 size de la map = 8
-AAB.CCDD
-AABCC.DD
-..B.....
-..B.....
-........
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-Insertion impossible. tetri.x = 6, tetri.y = 0
-passe a shift down, piece = 5
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-piece inseree, nb piece = 5 size de la map = 8
-AAB.CCDD
-AABCCEDD
-..B.EE..
-..B.E...
-........
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 6
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-piece inseree, nb piece = 6 size de la map = 8
-AAB.CCDD
-AABCCEDD
-..B.EE..
-..B.EFFF
-.......F
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-Insertion impossible. tetri.x = 6, tetri.y = 0
-passe a shift down, piece = 7
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-Insertion impossible. tetri.x = 6, tetri.y = 1
-passe a shift down, piece = 7
-piece inseree, nb piece = 7 size de la map = 8
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.G.....F
-........
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 8
-Insertion impossible. tetri.x = 0, tetri.y = 4
-piece inseree, nb piece = 8 size de la map = 8
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.GHH...F
-.HH.....
-........
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-Insertion impossible. tetri.x = 6, tetri.y = 0
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-Insertion impossible. tetri.x = 6, tetri.y = 1
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-Insertion impossible. tetri.x = 6, tetri.y = 2
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-Insertion impossible. tetri.x = 6, tetri.y = 3
-passe a shift down, piece = 9
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-piece inseree, nb piece = 9 size de la map = 8
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.GHHII.F
-.HH..I..
-.....I..
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-Insertion impossible. tetri.x = 6, tetri.y = 0
-passe a shift down, piece = 10
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-Insertion impossible. tetri.x = 6, tetri.y = 1
-passe a shift down, piece = 10
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-Insertion impossible. tetri.x = 6, tetri.y = 2
-passe a shift down, piece = 10
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-Insertion impossible. tetri.x = 6, tetri.y = 3
-passe a shift down, piece = 10
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-piece inseree, nb piece = 10 size de la map = 8
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.GHHIIJF
-.HH..IJJ
-.....I.J
-........
-Insertion impossible. tetri.x = 0, tetri.y = 0
-Insertion impossible. tetri.x = 1, tetri.y = 0
-Insertion impossible. tetri.x = 2, tetri.y = 0
-Insertion impossible. tetri.x = 3, tetri.y = 0
-Insertion impossible. tetri.x = 4, tetri.y = 0
-Insertion impossible. tetri.x = 5, tetri.y = 0
-passe a shift down, piece = 11
-Insertion impossible. tetri.x = 0, tetri.y = 1
-Insertion impossible. tetri.x = 1, tetri.y = 1
-Insertion impossible. tetri.x = 2, tetri.y = 1
-Insertion impossible. tetri.x = 3, tetri.y = 1
-Insertion impossible. tetri.x = 4, tetri.y = 1
-Insertion impossible. tetri.x = 5, tetri.y = 1
-passe a shift down, piece = 11
-Insertion impossible. tetri.x = 0, tetri.y = 2
-Insertion impossible. tetri.x = 1, tetri.y = 2
-Insertion impossible. tetri.x = 2, tetri.y = 2
-Insertion impossible. tetri.x = 3, tetri.y = 2
-Insertion impossible. tetri.x = 4, tetri.y = 2
-Insertion impossible. tetri.x = 5, tetri.y = 2
-passe a shift down, piece = 11
-Insertion impossible. tetri.x = 0, tetri.y = 3
-Insertion impossible. tetri.x = 1, tetri.y = 3
-Insertion impossible. tetri.x = 2, tetri.y = 3
-Insertion impossible. tetri.x = 3, tetri.y = 3
-Insertion impossible. tetri.x = 4, tetri.y = 3
-Insertion impossible. tetri.x = 5, tetri.y = 3
-passe a shift down, piece = 11
-Insertion impossible. tetri.x = 0, tetri.y = 4
-Insertion impossible. tetri.x = 1, tetri.y = 4
-Insertion impossible. tetri.x = 2, tetri.y = 4
-Insertion impossible. tetri.x = 3, tetri.y = 4
-Insertion impossible. tetri.x = 4, tetri.y = 4
-Insertion impossible. tetri.x = 5, tetri.y = 4
-passe a shift down, piece = 11
-Insertion impossible. tetri.x = 0, tetri.y = 5
-Insertion impossible. tetri.x = 1, tetri.y = 5
-Insertion impossible. tetri.x = 2, tetri.y = 5
-Insertion impossible. tetri.x = 3, tetri.y = 5
-Insertion impossible. tetri.x = 4, tetri.y = 5
-Insertion impossible. tetri.x = 5, tetri.y = 5
-passe a shift down, piece = 11
-piece inseree, nb piece = 11 size de la map = 8
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.GHHIIJF
-.HH..IJJ
-KKK..I.J
-.K......
-AAB.CCDD
-AABCCEDD
-GGB.EE..
-.GB.EFFF
-.GHHIIJF
-.HH..IJJ
-KKK..I.J
-.K......
+piece numero 3
+0001 1000 0000 0000 
+0001 1000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+0000 0000 0000 0000 
+piece inseree, nb piece = 3 size de la map = 5
+AABCC
+.ABCC
+.ABB.
+.....
+.....
+AABCC
+.ABCC
+.ABB.
+.....
+.....

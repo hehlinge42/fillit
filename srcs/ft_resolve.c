@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/16 18:01:38 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/17 10:59:42 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int		ft_check_insert(t_tetri *map, t_tetri tetri)
 		{
 			if (tetri.x == 0 && tetri.y == 2)
 			{
-				int debog = -1;
+				/*int debog = -1;
 				ft_putstr("LOLOLOLOL\n");
 				while (++debog < 16)
 					ft_print_bits(tetri.tetri[debog]);
@@ -100,8 +100,11 @@ int		ft_check_insert(t_tetri *map, t_tetri tetri)
 				ft_print_bits(tetri.tetri[y + tetri.y]);
 				ft_putstr("map\n");
 				ft_print_bits(map->tetri[y + tetri.y]);
-				ft_putstr("map char\n");
-				//ft_create_map
+				ft_putstr("full map\n");
+				debog = -1;
+				while (++debog < 16)
+					ft_print_bits(map->tetri[debog]);*/
+
 			}
 			ft_putstr("Insertion impossible. tetri.x = ");
 			ft_putnbr(tetri.x);
@@ -141,6 +144,13 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 	  ft_putchar('\n');*/
 	if (tetri  == nb_piece)
 		return (EXIT_SUCCESS);
+	int debog = -1;
+	ft_putstr("piece numero ");
+	ft_putnbr(tetri + 1);
+	ft_putchar('\n');
+	while (++debog < 16)
+	  ft_print_bits(tab[tetri].tetri[debog]);
+
 	if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
 	{
 		ft_putstr("piece inseree, nb piece = ");
@@ -165,15 +175,14 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
 				return (EXIT_SUCCESS);
 	}
-	ft_putstr("retirer la piece\n");
-	/*i = 0;
-	  while (i < nb_piece)
-	  {
-	  ft_shift(tab[i].tetri, tab[i].x, tab[i].y);
-	  tab[i].x = 0;
-	  tab[i].y = 0;
-	  i++;
-	  }
-	  ft_backtrack(tab, nb_piece, 0, ++size);*/
-	return (EXIT_FAILURE);
+	/*ft_putstr("retirer la piece ");
+	ft_putnbr(tetri);
+	ft_putstr("\n");
+	ft_create_map(tab, size, tetri);
+	ft_putchar('\n');
+	int		i = -1;
+	while (++i < tab[tetri - 1].height)
+		tab[nb_piece].tetri[tab[tetri - 1].y + i] &= ~tab[tetri - 1].tetri[tab[tetri - 1].y + i];
+	ft_create_map(tab, size, tetri);*/
+		return (EXIT_FAILURE);
 }
