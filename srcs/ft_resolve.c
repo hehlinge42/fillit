@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 17:06:37 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:16:25 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,10 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 	{
 		if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
 		{
+			//ft_create_map(tab, size, tetri + 1);
+			//ft_putchar('\n');
 			if (ft_backtrack(tab, nb_piece, tetri + 1, size) == EXIT_SUCCESS)
 				return (EXIT_SUCCESS);
-
 			i = -1; // si la piece ne permet pas de solve on l'enleve
 			while (++i < 16)
 				tab[nb_piece].tetri[i] = tmp[i];

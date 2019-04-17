@@ -6,11 +6,30 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:32:47 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/12 15:32:19 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:36:26 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+
+int			ft_check_size(t_tetri tab[NB_TETRI_MAX + 2], int nb_tetri)
+{
+	int		size;
+	int		i;
+
+	size = ft_nextsqrt(nb_tetri * 4);
+	if (size >= 4)
+		return (size);
+	i = -1;
+	while (++i < nb_tetri && size < 4)
+	{
+		if (tab[i].width > size)
+			size = tab[i].width;
+		if (tab[i].height > size)
+			size = tab[i].height;
+	}
+	return (size);
+}
 
 static int	ft_sqrt(int nb)
 {

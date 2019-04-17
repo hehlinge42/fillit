@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 14:08:46 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:37:24 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt);
 void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece);
 void	ft_print_map(int size, char map[size][size + 1]);
 void	ft_debug(char *str, int nb);
+int		ft_check_size(t_tetri tab[NB_TETRI_MAX + 2], int nb_tetri);
 
 #endif

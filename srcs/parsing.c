@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 17:01:52 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:37:55 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,7 +207,7 @@ int		ft_parse(const int fd)
 	}
 	if (ret < 0)
 		return (EXIT_FAILURE);
-	size = ft_nextsqrt(i * 4);
+	size = ft_check_size(tab, i);
 	/*ft_putstr("size = ");
 	ft_putnbr(size);
 	ft_putchar('\n');*/
@@ -215,8 +215,9 @@ int		ft_parse(const int fd)
 	while (ft_backtrack(tab, i, 0, size) == EXIT_FAILURE)
 	{
 		ft_restart(tab, i, 1);
+		ft_bandaid(tab, i);
 		size++;
-		ft_putstr("resize\n");
+		//ft_putstr("resize\n");
 	}		
 	/*ft_putstr("IT Works, its amazing and we are the best!\n");
 	int	debog = -1;
