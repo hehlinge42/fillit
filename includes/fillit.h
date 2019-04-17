@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:14:18 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:23:25 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ typedef struct	s_tetri
 int		ft_print_usage(void);
 int		ft_error(void);
 int		ft_parse(const int);
-int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 void	ft_print_board(t_list **begin_list);
 void	ft_print_bits(unsigned short int n);
 void	ft_del_list(t_list **begin_list);
-int		ft_check_domino(char *buff);
 void	ft_shift(t_tetri *piece);
 int		ft_nextsqrt(int nb);
 void	ft_size_width(t_tetri *piece, char buff[BUFF_SIZE + 1]);

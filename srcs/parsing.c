@@ -6,14 +6,14 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:11:14 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:22:49 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/includes/libft.h"
 #include "../includes/fillit.h"
 
-int		ft_count_neighbours(char *buff, int index)
+static int		ft_count_neighbours(char *buff, int index)
 {
 	int		count;
 
@@ -29,7 +29,7 @@ int		ft_count_neighbours(char *buff, int index)
 	return (count);
 }
 
-int		ft_check_domino(char *buff)
+static int		ft_check_domino(char *buff)
 {
 	int		i;
 	int		count_hash;
@@ -56,54 +56,35 @@ int		ft_check_domino(char *buff)
 	return (EXIT_SUCCESS);
 }
 
-void	ft_shift(t_tetri *piece)
+static void		ft_fill_tetri(t_tetri *piece, char buff[BUFF_SIZE + 1], int i)
 {
-	while ((piece->tetri[0] ^ UP_SHIFT) == UP_SHIFT)
+	int		j;
+
+	j = -1;
+	while (++j < 5)
 	{
-		piece->tetri[piece->y - 1] = piece->tetri[piece->y];
-		piece->tetri[piece->y] = piece->tetri[piece->y + 1];
-		piece->tetri[piece->y + 1] = piece->tetri[piece->y + 2];
-		piece->tetri[piece->y + 2] = piece->tetri[piece->y + 3];
-		piece->tetri[piece->y + 3] = 0;
-		piece->y--;
-	}
-	while ((piece->tetri[piece->y] | LEFT_SHIFT) == LEFT_SHIFT
-			&& (piece->tetri[piece->y + 1] | LEFT_SHIFT) == LEFT_SHIFT
-			&& (piece->tetri[piece->y + 2] | LEFT_SHIFT) == LEFT_SHIFT
-			&& (piece->tetri[piece->y + 3] | LEFT_SHIFT) == LEFT_SHIFT)
-	{
-		piece->tetri[piece->y] <<= 1;
-		piece->tetri[piece->y + 1] <<= 1;
-		piece->tetri[piece->y + 2] <<= 1;
-		piece->tetri[piece->y + 3] <<= 1;
-		piece->x--;
+		if (buff[i * 5 + j] == '#')
+		{
+			piece->tetri[i] <<= 1;
+			piece->tetri[i] |= 1;
+			if (j % 5 < piece->x)
+				piece->x = j % 5;
+		}
+		else if (buff[i * 5 + j] == '.')
+			piece->tetri[i] <<= 1;
 	}
 }
 
-int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
+static int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
 {
 	int		i;
-	int		j;
 
 	i = -1;
-	j = -1;
 	if (ft_check_domino(buff) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	while (++i < 4)
 	{
-		j = -1;
-		while (++j < 5)
-		{
-			if (buff[i * 5 + j] == '#')
-			{
-				piece->tetri[i] <<= 1;
-				piece->tetri[i] |= 1;
-				if (j % 5 < piece->x)
-					piece->x = j % 5;
-			}
-			else if (buff[i * 5 + j] == '.')
-				piece->tetri[i] <<= 1;
-		}
+		ft_fill_tetri(piece, buff, i);
 		if ((piece->tetri[i] | 0) == 0 && piece->x == 4)
 			piece->y++;
 		piece->tetri[i] <<= 12;

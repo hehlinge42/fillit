@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:07:33 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 18:13:16 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:20:55 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,26 @@ void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int *size)
 	ft_bandaid(tab, nb);
 }
 
+void	ft_shift(t_tetri *piece)
+{
+	while ((piece->tetri[0] ^ UP_SHIFT) == UP_SHIFT)
+	{
+		piece->tetri[piece->y - 1] = piece->tetri[piece->y];
+		piece->tetri[piece->y] = piece->tetri[piece->y + 1];
+		piece->tetri[piece->y + 1] = piece->tetri[piece->y + 2];
+		piece->tetri[piece->y + 2] = piece->tetri[piece->y + 3];
+		piece->tetri[piece->y + 3] = 0;
+		piece->y--;
+	}
+	while ((piece->tetri[piece->y] | LEFT_SHIFT) == LEFT_SHIFT
+			&& (piece->tetri[piece->y + 1] | LEFT_SHIFT) == LEFT_SHIFT
+			&& (piece->tetri[piece->y + 2] | LEFT_SHIFT) == LEFT_SHIFT
+			&& (piece->tetri[piece->y + 3] | LEFT_SHIFT) == LEFT_SHIFT)
+	{
+		piece->tetri[piece->y] <<= 1;
+		piece->tetri[piece->y + 1] <<= 1;
+		piece->tetri[piece->y + 2] <<= 1;
+		piece->tetri[piece->y + 3] <<= 1;
+		piece->x--;
+	}
+}
