@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 14:43:27 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:06:37 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 {
 	int		i;
 
+	if (piece->x == -1)
+	{
+		piece->x = 0;
+		return (EXIT_SUCCESS);
+	}
 	if (opt == CHECK_RIGHT && piece->width + piece->x < size)
 	{
 		i = -1;
@@ -64,39 +69,35 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 {
 	int		i;
 	unsigned short tmp[16];
+
+	// condition de succes
 	if (tetri  == nb_piece)
 		return (EXIT_SUCCESS);
-	/*ft_putstr("MAP\n");
-	  int debog = -1;
-	  while (++debog < 16)
-	  ft_print_bits(tab[nb_piece].tetri[debog]);*/
+
+	// creation du temp
 	i = -1;
 	while (++i < 16)
 		tmp[i] = tab[nb_piece].tetri[i];
-	if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
-	{
-		/*ft_debug("piece inseree", tetri);
-		ft_create_map(tab, size, tetri + 1);*/
-		if (ft_backtrack(tab, nb_piece, ++tetri, size) == EXIT_SUCCESS)
-			return (EXIT_SUCCESS);
-		while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS
-				|| ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
-		{
-			if (ft_backtrack(tab, nb_piece, tetri, size) == EXIT_SUCCESS)
-				return (EXIT_SUCCESS);
-		}
 
-		/*ft_putstr("retirer la piece ");
-		ft_putnbr(tetri);
-		ft_putstr("\n");*/
-		i = -1;
-		while (++i < 16)
-			tab[nb_piece].tetri[i] = tmp[i];
-	/*	i = -1;
-		while (++i < tab[tetri].height)
-			tab[nb_piece].tetri[tab[tetri].y + i] &= ~tab[tetri].tetri[tab[tetri].y + i];*/
-		ft_shift(&tab[tetri], 1);
-		return (EXIT_FAILURE);
+	// boucle tant qu'on peut shifter
+	while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS
+		|| ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
+	{
+		if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
+		{
+			if (ft_backtrack(tab, nb_piece, tetri + 1, size) == EXIT_SUCCESS)
+				return (EXIT_SUCCESS);
+
+			i = -1; // si la piece ne permet pas de solve on l'enleve
+			while (++i < 16)
+				tab[nb_piece].tetri[i] = tmp[i];
+			i = tetri;
+			while (++i < nb_piece)
+			{
+				ft_shift(&tab[i], 1);
+				tab[i].x = -1;
+			}
+		}
 	}
 	return (EXIT_FAILURE);
 }

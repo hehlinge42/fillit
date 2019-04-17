@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 14:44:00 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:01:52 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,6 +177,15 @@ void	ft_init_struct(t_tetri *piece)
 	piece->y = 0;
 }
 
+void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece)
+{
+	int		i;
+
+	i = -1;
+	while (++i < nb_piece)
+		tab[i].x = -1;
+}
+
 int		ft_parse(const int fd)
 {
 	t_tetri	tab[NB_TETRI_MAX + 2];
@@ -202,6 +211,7 @@ int		ft_parse(const int fd)
 	/*ft_putstr("size = ");
 	ft_putnbr(size);
 	ft_putchar('\n');*/
+	ft_bandaid(tab, i);
 	while (ft_backtrack(tab, i, 0, size) == EXIT_FAILURE)
 	{
 		ft_restart(tab, i, 1);
