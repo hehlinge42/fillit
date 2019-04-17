@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/16 15:45:28 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/17 14:44:00 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,12 +199,14 @@ int		ft_parse(const int fd)
 	if (ret < 0)
 		return (EXIT_FAILURE);
 	size = ft_nextsqrt(i * 4);
-	//printf("size = %d\n", size);
+	/*ft_putstr("size = ");
+	ft_putnbr(size);
+	ft_putchar('\n');*/
 	while (ft_backtrack(tab, i, 0, size) == EXIT_FAILURE)
 	{
 		ft_restart(tab, i, 1);
 		size++;
-		//printf("size = %d\n", size);
+		ft_putstr("resize\n");
 	}		
 	/*ft_putstr("IT Works, its amazing and we are the best!\n");
 	int	debog = -1;
