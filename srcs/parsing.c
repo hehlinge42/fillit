@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 17:37:55 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:11:14 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,62 +56,28 @@ int		ft_check_domino(char *buff)
 	return (EXIT_SUCCESS);
 }
 
-void	ft_shift(t_tetri *piece, int opt)
+void	ft_shift(t_tetri *piece)
 {
-	/*int debog = -1;
-	ft_putstr("PIECE AVANT SHIFT \n");
-	while (++debog < 16)
-		ft_print_bits(piece->tetri[debog]);*/
 	while ((piece->tetri[0] ^ UP_SHIFT) == UP_SHIFT)
 	{
-		//ft_putstr("AVANT SHIFT UP\n");
-		
-		/*ft_putstr("x = ");
-		ft_putnbr(piece->x);
-		ft_putchar('\n');
-		ft_putstr("y = ");
-		ft_putnbr(piece->y);
-		ft_putchar('\n');
-		ft_putchar('\n');*/
-
-		/*debog = -1;
-		while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
-
 		piece->tetri[piece->y - 1] = piece->tetri[piece->y];
 		piece->tetri[piece->y] = piece->tetri[piece->y + 1];
 		piece->tetri[piece->y + 1] = piece->tetri[piece->y + 2];
 		piece->tetri[piece->y + 2] = piece->tetri[piece->y + 3];
 		piece->tetri[piece->y + 3] = 0;
-		if (opt == 1)
-			piece->y--;
+		piece->y--;
 	}
 	while ((piece->tetri[piece->y] | LEFT_SHIFT) == LEFT_SHIFT
 			&& (piece->tetri[piece->y + 1] | LEFT_SHIFT) == LEFT_SHIFT
 			&& (piece->tetri[piece->y + 2] | LEFT_SHIFT) == LEFT_SHIFT
 			&& (piece->tetri[piece->y + 3] | LEFT_SHIFT) == LEFT_SHIFT)
 	{
-		//debog = -1;
-		/*ft_putstr("AVANT SHIFT LEFT\n");
-		ft_putnbr(piece->x);
-		ft_putchar('\n');
-		ft_putnbr(piece->y);
-		ft_putchar('\n');*/
-		/*while (++debog < 16)
-			ft_print_bits(piece->tetri[debog]);*/
 		piece->tetri[piece->y] <<= 1;
 		piece->tetri[piece->y + 1] <<= 1;
 		piece->tetri[piece->y + 2] <<= 1;
 		piece->tetri[piece->y + 3] <<= 1;
-		if (opt == 1)
-			piece->x--;
-		//ft_putstr("inf 2\n");
+		piece->x--;
 	}
-	/*debog = -1;
-	ft_putstr("PIECE APRES SHIFT \n");
-	while (++debog < 16)
-		ft_print_bits(piece->tetri[debog]);*/
-
 }
 
 int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
@@ -142,48 +108,10 @@ int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
 			piece->y++;
 		piece->tetri[i] <<= 12;
 	}
-	/*ft_putstr("x = ");
-	ft_putnbr(piece->x);
-	ft_putchar('\n');
-	ft_putstr("y = ");
-	ft_putnbr(piece->y);
-	ft_putchar('\n');
-	ft_putchar('\n');*/
-	ft_shift(piece, 1);
-	/*ft_putstr("x = ");
-	ft_putnbr(piece->x);
-	ft_putchar('\n');
-	ft_putstr("y = ");
-	ft_putnbr(piece->y);
-	ft_putchar('\n');
-	ft_putchar('\n');*/
+	ft_shift(piece);
 	ft_size_height(piece, buff);
 	ft_size_width(piece, buff);
-	i = -1;/*
-			  while (++i < 4)
-			  ft_print_bits(piece->tetri[i]);*/
 	return (EXIT_SUCCESS);
-}
-
-void	ft_init_struct(t_tetri *piece)
-{
-	int		i;
-
-	i = -1;
-	while (++i < 16)
-		piece->tetri[i] = 0;
-	piece->x = 4;
-	//piece->x = 0;
-	piece->y = 0;
-}
-
-void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece)
-{
-	int		i;
-
-	i = -1;
-	while (++i < nb_piece)
-		tab[i].x = -1;
 }
 
 int		ft_parse(const int fd)
@@ -208,50 +136,9 @@ int		ft_parse(const int fd)
 	if (ret < 0)
 		return (EXIT_FAILURE);
 	size = ft_check_size(tab, i);
-	/*ft_putstr("size = ");
-	ft_putnbr(size);
-	ft_putchar('\n');*/
 	ft_bandaid(tab, i);
 	while (ft_backtrack(tab, i, 0, size) == EXIT_FAILURE)
-	{
-		ft_restart(tab, i, 1);
-		ft_bandaid(tab, i);
-		size++;
-		//ft_putstr("resize\n");
-	}		
-	/*ft_putstr("IT Works, its amazing and we are the best!\n");
-	int	debog = -1;
-	while (++debog < 16)
-		ft_print_bits(tab[i].tetri[debog]);
-	ft_putchar('\n');*/
+		ft_restart(tab, i, &size);
 	ft_create_map(tab, size, i);
 	return (EXIT_SUCCESS);
-}
-
-void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt)
-{
-	int		i;
-
-	i = 0;
-	//ft_putstr("in restart\n");
-	while (i < nb)
-	{
-		if (opt == 1)
-			ft_shift(&tab[i], 1);
-		else
-			ft_shift(&tab[i], 0);
-		i++;
-	}
-	if (opt == 1)
-	{
-		//int debog = -1;
-		/*ft_putstr("avant full 0\n");
-		while (++debog < 16)
-			ft_print_bits(tab[nb].tetri[debog]);*/
-		ft_bzero(&tab[nb].tetri, 16);
-		/*ft_putstr("apres full 0\n");
-		debog = -1;
-		while (++debog < 16)
-			ft_print_bits(tab[nb].tetri[debog]);*/
-	}
 }

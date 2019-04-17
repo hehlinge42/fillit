@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.c                                            :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/17 14:06:40 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 17:42:55 by edbaudou         ###   ########.fr       */
+/*   Created: 2019/04/17 18:07:33 by edbaudou          #+#    #+#             */
+/*   Updated: 2019/04/17 18:13:16 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-void	ft_debug(char *str, int nb)
+void	ft_init_struct(t_tetri *piece)
 {
-	ft_putstr(str);
-	ft_putchar(' ');
-	ft_putnbr(nb);
-	ft_putchar('\n');
+	int		i;
+
+	i = -1;
+	while (++i < 16)
+		piece->tetri[i] = 0;
+	piece->x = 4;
+	piece->y = 0;
 }
 
-void	ft_print_bits(unsigned short int n) 
-{ 
-	unsigned int	i; 
-	int				count;
+void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece)
+{
+	int		i;
 
-	count = 0;
-	i = (1 << 15);
-	while (i > 0)
+	i = -1;
+	while (++i < nb_piece)
+		tab[i].x = -1;
+}
+
+void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int *size)
+{
+	int		i;
+
+	i = 0;
+	while (i < nb)
 	{
-		if (n & i)
-			ft_putchar('1');
-		else
-			ft_putchar('0');
-		if (count % 4 == 3)
-			ft_putchar(' ');
-		i /= 2;
-		count++;
+		ft_shift(&tab[i]);
+		i++;
 	}
-	ft_putchar('\n');
+	ft_bzero(&tab[nb].tetri, 16);
+	(*size)++;
+	ft_bandaid(tab, nb);
 }
+

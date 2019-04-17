@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 17:16:25 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:11:47 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int si
 			i = tetri;
 			while (++i < nb_piece)
 			{
-				ft_shift(&tab[i], 1);
+				ft_shift(&tab[i]);
 				tab[i].x = -1;
 			}
 		}

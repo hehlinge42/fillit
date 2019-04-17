@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 13:28:08 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/16 15:41:31 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/17 17:47:26 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int		main(int ac, char **av)
     if (ac != 2)
 		return(ft_print_usage());
 	else if ((fd = open(av[1], O_RDONLY)) < 0)
-		return (EXIT_FAILURE);
-	else if (ft_parse(fd) == 1)
+		return (ft_error());
+	else if (ft_parse(fd) == EXIT_FAILURE)
 		return (ft_error());
 	return (EXIT_SUCCESS);
 }

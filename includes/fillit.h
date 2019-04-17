@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 17:37:24 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:14:18 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,22 @@ int		ft_error(void);
 int		ft_parse(const int);
 int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 void	ft_print_board(t_list **begin_list);
-void	ft_print_bits(unsigned int n);
-int		ft_reverse_bits(unsigned int n);
+void	ft_print_bits(unsigned short int n);
 void	ft_del_list(t_list **begin_list);
 int		ft_check_domino(char *buff);
-void	ft_shift(t_tetri *piece, int opt);
+void	ft_shift(t_tetri *piece);
 int		ft_nextsqrt(int nb);
 void	ft_size_width(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 void	ft_size_height(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 int		ft_check_shift(t_tetri *piece, int x, int y);
 int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int size);
 int		ft_check_insert(t_tetri *map, t_tetri tetr);
-void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int opt);
+void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int *size);
 void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece);
 void	ft_print_map(int size, char map[size][size + 1]);
 void	ft_debug(char *str, int nb);
 int		ft_check_size(t_tetri tab[NB_TETRI_MAX + 2], int nb_tetri);
+void	ft_init_struct(t_tetri *piece);
+void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece);
 
 #endif
