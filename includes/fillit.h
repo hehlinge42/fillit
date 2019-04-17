@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:23:25 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:33:47 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ void	ft_debug(char *str, int nb);
 int		ft_check_size(t_tetri tab[NB_TETRI_MAX + 2], int nb_tetri);
 void	ft_init_struct(t_tetri *piece);
 void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece);
+void	ft_reset_for_back_track(t_tetri tab[NB_TETRI_MAX + 2], int tetri, int nb_piece,
+		unsigned short tmp[16]);
 
 #endif

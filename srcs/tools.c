@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:07:33 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 18:20:55 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:33:41 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,21 @@ void	ft_shift(t_tetri *piece)
 		piece->tetri[piece->y + 2] <<= 1;
 		piece->tetri[piece->y + 3] <<= 1;
 		piece->x--;
+	}
+}
+
+void	ft_reset_for_back_track(t_tetri tab[NB_TETRI_MAX + 2], int tetri, int nb_piece,
+		unsigned short tmp[16])
+{
+	int		i;
+
+	i = -1; 			
+	while (++i < 16)
+		tab[nb_piece].tetri[i] = tmp[i];
+	i = tetri;
+	while (++i < nb_piece)
+	{
+		ft_shift(&tab[i]);
+		tab[i].x = -1;
 	}
 }
