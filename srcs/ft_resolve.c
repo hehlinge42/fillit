@@ -6,13 +6,33 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:33:02 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:53:27 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-int		ft_check_shift(t_tetri *piece, int opt, int size)
+static int		ft_check_shift_right(t_tetri *piece, int size)
+{
+	int		i;
+	
+	if (piece->x == -1)
+	{
+		piece->x = 0;
+		return (EXIT_SUCCESS);
+	}	
+	if (piece->width + piece->x < size)
+	{
+		i = -1;
+		while (++i < 4)
+			piece->tetri[piece->y + i] >>= 1;
+		(piece->x)++;
+		return (EXIT_SUCCESS);
+	}
+	return (EXIT_FAILURE);
+}
+
+static int		ft_check_shift_down(t_tetri *piece, int size)
 {
 	int		i;
 
@@ -21,15 +41,7 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 		piece->x = 0;
 		return (EXIT_SUCCESS);
 	}
-	if (opt == CHECK_RIGHT && piece->width + piece->x < size)
-	{
-		i = -1;
-		while (++i < 4)
-			piece->tetri[piece->y + i] >>= 1;
-		(piece->x)++;
-		return (EXIT_SUCCESS);
-	}
-	else if (opt == CHECK_DOWN && piece->height + piece->y < size)
+	if (piece->height + piece->y < size)
 	{			
 		i = piece->height + 1;
 		while (--i >= 0)
@@ -45,7 +57,7 @@ int		ft_check_shift(t_tetri *piece, int opt, int size)
 	return (EXIT_FAILURE);
 }
 
-int		ft_check_insert(t_tetri *map, t_tetri tetri)
+static int		ft_check_insert(t_tetri *map, t_tetri tetri)
 {
 	int		y;
 
@@ -76,8 +88,8 @@ int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece,
 	i = -1;
 	while (++i < 16)
 		tmp[i] = tab[nb_piece].tetri[i];
-	while (ft_check_shift(&tab[tetri], CHECK_RIGHT, size) == EXIT_SUCCESS
-		|| ft_check_shift(&tab[tetri], CHECK_DOWN, size) == EXIT_SUCCESS)
+	while (ft_check_shift_right(&tab[tetri], size) == EXIT_SUCCESS
+		|| ft_check_shift_down(&tab[tetri], size) == EXIT_SUCCESS)
 	{
 		if (ft_check_insert(&tab[nb_piece], tab[tetri]) == EXIT_SUCCESS)
 		{

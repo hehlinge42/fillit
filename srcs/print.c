@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 12:20:42 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 17:50:45 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:55:20 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece)
 		map[piece][size] = '\0';
 	}
 	piece = -1;
-	while (++piece < nb_piece) // on itere dans les pieces
+	while (++piece < nb_piece)
 	{
 		line = -1;
-		while (++line < 4) // on itere dans les lignes de la piece
+		while (++line < 4)
 		{
 			col = -1;
 			mask = 1 << (15 - tab[piece].x);
-			while (++col < 4) // on itere dans les colonnes de la piece
+			while (++col < 4)
 			{
 				if (mask & tab[piece].tetri[tab[piece].y])
 					map[tab[piece].y][tab[piece].x] = piece + 'A';
