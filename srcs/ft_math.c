@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:32:47 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 09:59:21 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:52:48 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ void		ft_size_height(t_tetri *piece, char buff[BUFF_SIZE + 1])
 	int		i;
 	int		empty_row;
 
-	empty_row = 0;
 	i = 0;
-	while (buff[i])
+	empty_row = 0;
+	while (i < BUFF_SIZE && buff[i])
 	{
 		while (buff[i] != '\n' && buff[i] == '.')
 			i++;

@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:07:33 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/18 10:02:05 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:41:13 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_init_struct(t_tetri *piece)
 		piece->tetri[i] = 0;
 	piece->x = 4;
 	piece->y = 0;
+	piece->height = 0;
+	piece->width = 0;
 }
 
 void	ft_bandaid(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece)
