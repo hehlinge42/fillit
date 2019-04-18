@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handler.c                                    :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/17 17:46:26 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/18 14:24:04 by edbaudou         ###   ########.fr       */
+/*   Created: 2019/04/01 13:51:10 by edbaudou          #+#    #+#             */
+/*   Updated: 2019/04/18 14:22:46 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
-#include <unistd.h>
-#include <stdlib.h>
+#include <string.h>
 
-static void		ft_putstr_err(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	if (!str)
-		return ;
-	write(2, str, ft_strlen(str));
-}
+	char	*cpy;
 
-int				ft_print_usage(void)
-{
-	ft_putstr_err("usage: fillit  source_file\n");
-	return (EXIT_FAILURE);
-}
-
-int				ft_error(void)
-{
-	ft_putstr("error\n");
-	return (EXIT_FAILURE);
+	cpy = (char*)str;
+	while (*cpy)
+		cpy++;
+	return (cpy - str);
 }

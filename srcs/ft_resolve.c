@@ -6,11 +6,12 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 10:01:43 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:25:56 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+#include <stdlib.h>
 
 static int	ft_check_shift_right(t_tetri *piece, int size)
 {

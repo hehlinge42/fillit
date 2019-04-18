@@ -6,12 +6,11 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 13:28:08 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 09:52:29 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:17:03 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
-#include "../libft/includes/libft.h"
 #include <stdlib.h>
 #include <fcntl.h>
 

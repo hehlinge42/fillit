@@ -1,6 +1,5 @@
 CC = clang 
 CFLAGS = -Wall -Wextra -Werror -I $(INCL)
-OBJDIR = objs
 SRCDIR = ./srcs
 SRC = main.c \
 	  error_handler.c \
@@ -8,14 +7,16 @@ SRC = main.c \
 	  ft_math.c \
 	  ft_resolve.c \
 	  print.c \
-	  debug.c \
-	  tools.c
+	  tools.c \
+	  ft_strlen.c \
+	  ft_putstr.c \
+	  ft_memset.c \
+	  ft_bzero.c
 INCL = ./includes
 LIBCREATOR = $(addprefix $(LIBDIR)/, $(LIB))
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
-OBJ = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
+OBJ = $(addsuffix .o, $(basename $(SRC)))
 NAME = fillit
-include libft/Makefile
 
 all: $(NAME)
 
@@ -23,14 +24,13 @@ $(NAME): $(OBJ) $(NAME_LIB)
 	@$(CC) $(CFLAGS) -o $(NAME) $^
 	@echo "\n\033[38;5;1;4;1m$(NAME)\033[0m is ready to be used\n"
 
-$(OBJDIR)/%.o : $(SRCDIR)/%.c  
-	@mkdir -p $(OBJDIR)
+%.o : $(SRCDIR)/%.c  
 	@echo "\033[38;5;82m$@\033[0m has been created" 
 	@$(CC) -o $@ -c $? $(CFLAGS) -I $(INCL)
 
 clean: 
-	@rm -rf $(OBJDIR)
-	@echo "\033[38;5;208m$(OBJDIR)\033[0m has been deleted" 
+	@rm -rf $(OBJ)
+	@echo "\033[38;5;208m$(OBJ)\033[0m has been deleted" 
 
 fclean: clean
 	@rm -f $(NAME)

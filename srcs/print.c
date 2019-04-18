@@ -6,11 +6,12 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 12:20:42 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/18 11:14:00 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:26:16 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
+#include <unistd.h>
 
 static void	ft_add_tetri(t_tetri tab[NB_TETRI_MAX + 2], int size, int piece,
 	char map[size][size + 1])

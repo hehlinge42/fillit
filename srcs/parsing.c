@@ -6,12 +6,13 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 14:11:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 14:11:59 by hehlinge         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:25:35 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/includes/libft.h"
+#include <stdlib.h>
 #include "../includes/fillit.h"
+#include <unistd.h>
 
 static int		ft_count_neighbours(char *buff, int index)
 {
