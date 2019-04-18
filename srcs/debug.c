@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 14:06:40 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 17:42:55 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 09:51:09 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_debug(char *str, int nb)
 	ft_putchar('\n');
 }
 
-void	ft_print_bits(unsigned short int n) 
-{ 
-	unsigned int	i; 
+void	ft_print_bits(unsigned short int n)
+{
+	unsigned int	i;
 	int				count;
 
 	count = 0;

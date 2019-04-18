@@ -6,7 +6,7 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 18:07:33 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/17 18:34:39 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 10:02:05 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ft_reset_for_back_track(t_tetri tab[NB_TETRI_MAX + 2], int tetri,
 {
 	int		i;
 
-	i = -1; 			
+	i = -1;
 	while (++i < 16)
 		tab[nb_piece].tetri[i] = tmp[i];
 	i = tetri;

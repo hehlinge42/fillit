@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:51:36 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 11:11:50 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,14 @@ typedef struct	s_tetri
 int		ft_print_usage(void);
 int		ft_error(void);
 int		ft_parse(const int);
-void	ft_print_board(t_list **begin_list);
 void	ft_print_bits(unsigned short int n);
-void	ft_del_list(t_list **begin_list);
 void	ft_shift(t_tetri *piece);
-int		ft_nextsqrt(int nb);
 void	ft_size_width(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 void	ft_size_height(t_tetri *piece, char buff[BUFF_SIZE + 1]);
 int		ft_check_shift(t_tetri *piece, int x, int y);
 int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece, int tetri, int size);
 void	ft_restart(t_tetri tab[NB_TETRI_MAX + 2], int nb, int *size);
 void	ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece);
-void	ft_print_map(int size, char map[size][size + 1]);
 void	ft_debug(char *str, int nb);
 int		ft_check_size(t_tetri tab[NB_TETRI_MAX + 2], int nb_tetri);
 void	ft_init_struct(t_tetri *piece);

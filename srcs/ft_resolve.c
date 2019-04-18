@@ -6,21 +6,21 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 11:02:55 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:53:27 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 10:01:43 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 
-static int		ft_check_shift_right(t_tetri *piece, int size)
+static int	ft_check_shift_right(t_tetri *piece, int size)
 {
 	int		i;
-	
+
 	if (piece->x == -1)
 	{
 		piece->x = 0;
 		return (EXIT_SUCCESS);
-	}	
+	}
 	if (piece->width + piece->x < size)
 	{
 		i = -1;
@@ -32,7 +32,7 @@ static int		ft_check_shift_right(t_tetri *piece, int size)
 	return (EXIT_FAILURE);
 }
 
-static int		ft_check_shift_down(t_tetri *piece, int size)
+static int	ft_check_shift_down(t_tetri *piece, int size)
 {
 	int		i;
 
@@ -42,7 +42,7 @@ static int		ft_check_shift_down(t_tetri *piece, int size)
 		return (EXIT_SUCCESS);
 	}
 	if (piece->height + piece->y < size)
-	{			
+	{
 		i = piece->height + 1;
 		while (--i >= 0)
 			piece->tetri[piece->y + i + 1] = piece->tetri[piece->y + i];
@@ -57,7 +57,7 @@ static int		ft_check_shift_down(t_tetri *piece, int size)
 	return (EXIT_FAILURE);
 }
 
-static int		ft_check_insert(t_tetri *map, t_tetri tetri)
+static int	ft_check_insert(t_tetri *map, t_tetri tetri)
 {
 	int		y;
 
@@ -77,13 +77,13 @@ static int		ft_check_insert(t_tetri *map, t_tetri tetri)
 	return (EXIT_SUCCESS);
 }
 
-int		ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece,
+int			ft_backtrack(t_tetri tab[NB_TETRI_MAX + 2], int nb_piece,
 		int tetri, int size)
 {
 	int				i;
 	unsigned short	tmp[16];
 
-	if (tetri  == nb_piece)
+	if (tetri == nb_piece)
 		return (EXIT_SUCCESS);
 	i = -1;
 	while (++i < 16)

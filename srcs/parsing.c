@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/17 18:22:49 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 10:02:27 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ static int		ft_create_domino(t_tetri *piece, char buff[BUFF_SIZE + 1])
 	return (EXIT_SUCCESS);
 }
 
-int		ft_parse(const int fd)
+int				ft_parse(const int fd)
 {
 	t_tetri	tab[NB_TETRI_MAX + 2];
 	char	buff[BUFF_SIZE + 1];
