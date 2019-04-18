@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/16 15:06:24 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 10:02:27 by hehlinge         ###   ########.fr       */
+/*   Created: 2019/04/18 14:11:55 by hehlinge          #+#    #+#             */
+/*   Updated: 2019/04/18 14:11:59 by hehlinge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int				ft_parse(const int fd)
 			return (EXIT_FAILURE);
 		i++;
 	}
-	if (ret < 0)
+	if (ret < 0 || i > 25 || ft_strlen(buff) != BUFF_SIZE - 1)
 		return (EXIT_FAILURE);
 	size = ft_check_size(tab, i);
 	ft_bandaid(tab, i);
