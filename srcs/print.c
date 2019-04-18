@@ -6,15 +6,15 @@
 /*   By: edbaudou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 12:20:42 by edbaudou          #+#    #+#             */
-/*   Updated: 2019/04/18 14:26:16 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 15:24:15 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fillit.h"
 #include <unistd.h>
-
-static void	ft_add_tetri(t_tetri tab[NB_TETRI_MAX + 2], int size, int piece,
-	char map[size][size + 1])
+#include <stdio.h>
+static void	ft_add_tetri(t_tetri tab[NB_TETRI_MAX + 2], int piece,
+	char map[MAX_SIZE][MAX_SIZE + 1])
 {
 	int		line;
 	int		col;
@@ -39,7 +39,7 @@ static void	ft_add_tetri(t_tetri tab[NB_TETRI_MAX + 2], int size, int piece,
 	tab[piece].y -= 4;
 }
 
-static void	ft_print_map(int size, char map[size][size + 1])
+static void	ft_print_map(int size, char map[MAX_SIZE][MAX_SIZE + 1])
 {
 	int		count;
 
@@ -53,9 +53,12 @@ static void	ft_print_map(int size, char map[size][size + 1])
 
 void		ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece)
 {
-	char	map[size][size + 1];
+	char	map[MAX_SIZE][MAX_SIZE + 1];
 	int		piece;
 
+	piece = -1;
+	while (++piece < MAX_SIZE)
+		ft_bzero(map[piece], MAX_SIZE);
 	piece = -1;
 	while (++piece < size)
 	{
@@ -64,6 +67,6 @@ void		ft_create_map(t_tetri tab[NB_TETRI_MAX + 2], int size, int nb_piece)
 	}
 	piece = -1;
 	while (++piece < nb_piece)
-		ft_add_tetri(tab, size, piece, map);
+		ft_add_tetri(tab, piece, map);
 	ft_print_map(size, map);
 }

@@ -6,7 +6,7 @@
 /*   By: hehlinge <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 09:40:03 by hehlinge          #+#    #+#             */
-/*   Updated: 2019/04/18 14:33:35 by edbaudou         ###   ########.fr       */
+/*   Updated: 2019/04/18 15:18:52 by edbaudou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # define BUFF_SIZE 21
+# define MAX_SIZE 16
 # define NB_TETRI_MAX 26
 # define UP_SHIFT 0xFFFF
 # define LEFT_SHIFT 0x7FFF
